@@ -8,7 +8,7 @@ export const store = {
 
   setState(newState) {
     for (const [key, value] of Object.entries(newState)) {
-      if (!this.state[key]) continue;
+      if (!Object.keys(this.state).includes(key)) continue;
       this.state[key] = value;
     }
   },

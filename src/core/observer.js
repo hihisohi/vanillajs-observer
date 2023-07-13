@@ -17,7 +17,7 @@ export const observable = (obj) => {
         return _value;
       },
       set(value) {
-        console.log('asd');
+        console.log('redux일때만 2번 동작함 왜?');
         // 변경된 상태가 이전 상태와 같을 경우 방어 로직
         if (_value === value) return; // 원시타입 감시
         if (JSON.stringify(_value) === JSON.stringify(value)) return; // 배열, 객체 감시 -> Set, Map, WeekSet, WeekMap은 JSON.Stringify로 변환되지 않으니 추가적인 검사 로직 필요
